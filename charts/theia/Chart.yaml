@@ -1,0 +1,9 @@
+apiVersion: v2
+name: theia
+description: Theia da aula
+
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+icon: https://iconarchive.com/download/i89709/alecive/flatwoken/Apps-Ide.ico
