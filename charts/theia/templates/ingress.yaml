@@ -2,15 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "theia.fullname" . }}-ingress
+labels:
+    {{- include "theia.labels" . | nindent 4 }}
 spec:
   rules:
   - host: {{ .Values.ingress.host }}
     http:
       paths:
       - backend: 
-           service:
-             name: {{ include "theia.fullname" . }}-service
-           port:
-             number: {{ .Values.ingress.port }}
+          service:
+            name: {{ include "theia.fullname" . }}-service
+            port:
+              number: {{ .Values.ingress.port }}
         path: /
         pathType: Prefix
