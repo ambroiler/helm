@@ -27,7 +27,7 @@ spec:
            claimName: {{ include "theia.fullname" . }}-disco
 
       containers:
-      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+      - image: {{ .Values.image.repository }}
         name: {{ .Chart.Name }}
         ports:
         - containerPort: 3000
