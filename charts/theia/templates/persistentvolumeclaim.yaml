@@ -2,6 +2,9 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "theia.fullname" . }}-disco
+  labels:
+    {{- include "theia.labels" . | nindent 4 }}
+
 spec:
   accessModes:
   - {{ .Values.persistentVolumeClaim.accessModes }}

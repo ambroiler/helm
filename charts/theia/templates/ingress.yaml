@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ include "theia.fullname" . }}-ingress
-labels:
+  labels:
     {{- include "theia.labels" . | nindent 4 }}
 spec:
   rules:
