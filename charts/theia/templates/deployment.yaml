@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-      {{- include "theia.selectorLabels" . | nindent 6 }}
+        {{- include "theia.selectorLabels" . | nindent 8 }}
     spec:
       securityContext:
         runAsUser: 1000
