@@ -5,6 +5,7 @@ metadata:
   labels:
     {{- include "theia.labels" . | nindent 4 }}
 spec:
+  type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 3000
